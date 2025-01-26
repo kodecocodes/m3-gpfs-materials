@@ -153,5 +153,13 @@ extension Request2<HTTPURLResponse> { }
 
 let networkRequests: [any Request2<HTTPURLResponse>]
 
+// Protocols are non-nominal types
+protocol MyProtocol {
+  var number: Int { get set }
+  init(number: Int)
+}
+
+//let mp = MyProtocol(number: 42)  // uncomment to see error
+
 // Simulating Abstract Classes
 // See [Abstract types and methods in Swift](https://www.swiftbysundell.com/articles/abstract-types-and-methods/)
